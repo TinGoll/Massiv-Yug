@@ -11,11 +11,42 @@ declare module "@mui/material/styles" {
       danger?: string;
     };
   }
+  interface BreakpointOverrides {
+    mobile: true;
+    tablet: true;
+    laptop: true;
+    desktop: true;
+  }
+
+  interface TypographyVariants {
+    poster: React.CSSProperties;
+  }
+
+  // allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    poster?: React.CSSProperties;
+  }
+}
+
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    poster: true;
+  }
 }
 
 export const themeOptions: ThemeOptions = {
+  typography: {
+    poster: {
+      fontSize: "4rem",
+      color: "#333333",
+      fontFamily: "Orchidea Pro",
+    },
+  },
+  status: {
+    danger: "#E9345B",
+  },
   palette: {
-    mode: "light",
+    // mode: "light",
     primary: {
       main: "#333333",
     },
@@ -36,6 +67,10 @@ export const themeOptions: ThemeOptions = {
       md: 900,
       lg: 1200,
       xl: 1536,
+      mobile: 100,
+      tablet: 100,
+      laptop: 100,
+      desktop: 100,
     },
   },
   mixins: {
