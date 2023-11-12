@@ -47,3 +47,4 @@ lerna-debug.log*
 *.code-workspace
 
 client/src/gatsby-types.d.ts
+client/src/pages/test/*
