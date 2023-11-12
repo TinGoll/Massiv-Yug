@@ -1,5 +1,10 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config({
+  // path: `.env.${process.env.NODE_ENV}`,
+  path: `../.env`,
+});
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Массив Юг`,
@@ -10,7 +15,8 @@ const config: GatsbyConfig = {
       и центральное место здесь занимает качественная стильная мебель. 
       Благодаря компании «МАССИВ-ЮГ» вы сами можете принять участие в создание своей мебели из массива, 
       выбирая её стилистику, конфигурацию, цветовые решения и фурнитуру. Всё остальное сделаем мы.`,
-    keywords: "фасады, МДФ, массив, комплектующие, производство, заказать, мебель, качество, индивидуальный подход, гибкая ценовая политика, недорогой товар, доступные цены, экономичные фасады",
+    keywords:
+      "фасады, МДФ, массив, комплектующие, производство, заказать, мебель, качество, индивидуальный подход, гибкая ценовая политика, недорогой товар, доступные цены, экономичные фасады",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -22,7 +28,28 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: "Массив Юг",
+        short_name: "MYug",
+        start_url: "/",
+        background_color: "#FFFFFF",
+        theme_color: "#161B20",
+        // Включает подсказку «Добавить на главный экран» и отключает пользовательский интерфейс браузера (включая кнопку «Назад»)
+        display: "minimal-ui",
+        // display: "standalone",
+        icon: "src/images/icon.png", // Этот путь относится к корню сайта.
+        // Необязательный атрибут, обеспечивающий поддержку проверки CORS.
+        // Если вы не укажете опцию crossOrigin, CORS будет пропущен для манифеста.
+        // Любое недопустимое ключевое слово или пустая строка по умолчанию означает `anonymous`
+        // crossOrigin: `use-credentials`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        custom: {
+          families: ["Orchidea Pro"],
+          urls: ["/fonts/orchidea-pro/orchidea-pro.css"],
+        },
       },
     },
     "gatsby-plugin-mdx",
