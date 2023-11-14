@@ -10,7 +10,7 @@ function PDFIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_3801_2442)">
+      <g clipPath="url(#clip0_3801_2442)">
         <path
           d="M4.49998 0H23.6171L33.7499 10.0935V33.75C33.7499 34.9931 32.742 36 31.5 36H4.49998C3.25794 36 2.25 34.9931 2.25 33.75V2.24998C2.25 1.0069 3.25806 0 4.49998 0Z"
           fill="#FCE6EB"
