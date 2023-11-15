@@ -95,14 +95,15 @@ export const themeOptions: ThemeOptions = {
     },
     blockHeader: {
       fontSize: "16px",
-      fontWeight: 500,
+      fontWeight: 400,
+      letterSpacing:3,
       lineHeight: "21.28px",
       color: "#000000",
       textTransform: "uppercase",
     },
     blockNumber: {
       fontSize: "27px",
-      fontWeight: 600,
+      fontWeight: 400,
       lineHeight: "35.91px",
       color: "#FFC099",
     },
