@@ -5,18 +5,16 @@ import Divider from "@mui/material/Divider/Divider";
 import Typography from "@mui/material/Typography/Typography";
 import React from "react";
 
-const Container = styled(Box)(() => {
-  return {};
-});
+const Container = styled(Box)``
 
 interface Props {
-  darkTheme?: boolean;
+  dark?: boolean;
   number: number;
   text: string;
 }
 
 const HeaderBlock: React.FC<Props> = ({
-  darkTheme,
+  dark,
   number,
   text,
   ...props
@@ -29,6 +27,7 @@ const HeaderBlock: React.FC<Props> = ({
         justifyContent: "center",
         height: "128px",
       }}
+      {...props}
     >
       <Typography
         sx={{
@@ -41,11 +40,11 @@ const HeaderBlock: React.FC<Props> = ({
       >
         {number.toString().padStart(2, "0")}
       </Typography>
-      <Divider orientation="vertical" flexItem />
+      <Divider orientation="vertical" flexItem/>
       <Typography
         sx={{
           ...theme.typography.blockHeader,
-          color: darkTheme ? "#FFFFFF" : "#000000",
+          color: dark ? "#FFFFFF" : "#000000",
           display: "flex",
           alignItems: "center",
           height: "100%",
