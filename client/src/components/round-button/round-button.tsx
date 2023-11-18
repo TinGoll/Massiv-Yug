@@ -39,7 +39,7 @@ const RoundButton: React.FC<Props> = ({
               ? "none"
               : `2px solid ${theme.palette.divider}`,
           px: 6,
-          color: theme.palette.common.white,
+          color: variant === "contained" ? theme.palette.common.white : theme.palette.text.primary,
           "&:focus": {
             boxShadow: `0px 0px 0px 4px ${shadowColor}`,
             transition: "box-shadow 0.2s ease-in-out",
