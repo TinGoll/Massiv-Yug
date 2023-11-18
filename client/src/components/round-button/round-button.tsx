@@ -7,6 +7,7 @@ const Button = styled("button")`
   font-weight: 600;
   font-size: 16px;
   line-height: 22.24px;
+  user-select: none;
 `;
 
 const RoundButton: React.FC<Props> = ({
@@ -23,7 +24,7 @@ const RoundButton: React.FC<Props> = ({
     return Number(height) / 2;
   };
   const radius = calculateRadius();
-  const outlineColor = alpha(theme.colors.light[color], 0.4);
+  const shadowColor = alpha(theme.colors.light[color], 0.2);
   return (
     <Button
       sx={[
@@ -39,10 +40,9 @@ const RoundButton: React.FC<Props> = ({
               : `2px solid ${theme.palette.divider}`,
           px: 6,
           color: theme.palette.common.white,
-          outlineColor,
           "&:focus": {
-            outline: `4px solid ${outlineColor}`,
-            transition: "outline 0.3s ease-in-out",
+            boxShadow: `0px 0px 0px 4px ${shadowColor}`,
+            transition: "box-shadow 0.2s ease-in-out",
           },
         },
         ...(Array.isArray(sx) ? sx : [sx]),
