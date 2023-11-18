@@ -1,5 +1,6 @@
-import { SxProps, Theme, styled, useTheme, alpha } from "@mui/material";
 import React from "react";
+import { SxProps, Theme, styled, useTheme, alpha } from "@mui/material";
+import { brightColor } from "../../utils";
 
 const Button = styled("button")`
   overflow: hidden;
@@ -39,10 +40,27 @@ const RoundButton: React.FC<Props> = ({
               ? "none"
               : `2px solid ${theme.palette.divider}`,
           px: 6,
-          color: variant === "contained" ? theme.palette.common.white : theme.palette.text.primary,
+          color:
+            variant === "contained"
+              ? theme.palette.common.white
+              : theme.palette.text.primary,
           "&:focus": {
             boxShadow: `0px 0px 0px 4px ${shadowColor}`,
             transition: "box-shadow 0.2s ease-in-out",
+          },
+          "&:hover": {
+            background:
+              variant === "contained"
+                ? brightColor(theme.colors.light[color], 0.2)
+                : alpha(brightColor(theme.colors.light[color], -0.2), 0.2),
+                transition: "background 0.05s ease-in-out",
+          },
+          "&:active": {
+            background:
+              variant === "contained"
+                ? brightColor(theme.colors.light[color], -0.2)
+                : alpha(brightColor(theme.colors.light[color], 0.4), 0.3),
+                transition: "background 0.05s ease-in-out",
           },
         },
         ...(Array.isArray(sx) ? sx : [sx]),
