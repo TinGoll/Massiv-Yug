@@ -16,6 +16,7 @@ import Phone from "./phone-icon";
 import Ruler from "./ruler-icon";
 import Star from "./star-icon";
 import Transform from "./transform-icon";
+import Whatsapp from "./whatsapp-icon";
 import WoodTexture from "./wood-texture-icon";
 
 export {
@@ -38,4 +39,5 @@ export {
   Star,
   Transform,
   WoodTexture,
+  Whatsapp
 };
