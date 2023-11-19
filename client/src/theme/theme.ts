@@ -20,6 +20,11 @@ declare module "@mui/material/styles" {
     colors: Colors;
   }
   interface BreakpointOverrides {
+    xs: false;
+    sm: false;
+    md: false;
+    lg: false;
+    xl: false;
     mobile: true;
     tablet: true;
     laptop: true;
@@ -88,7 +93,7 @@ export const themeOptions: ThemeOptions = {
     },
     bigNumber: {
       fontSize: "104px",
-      fontWeight: 300,
+      fontWeight: 200,
       lineHeight: "105.04px",
       color: "#000000",
       fontFamily: "Orchidea Pro",
@@ -96,7 +101,7 @@ export const themeOptions: ThemeOptions = {
     blockHeader: {
       fontSize: "16px",
       fontWeight: 400,
-      letterSpacing:3,
+      letterSpacing: 3,
       lineHeight: "21.28px",
       color: "#000000",
       textTransform: "uppercase",
@@ -108,32 +113,13 @@ export const themeOptions: ThemeOptions = {
       color: "#FFC099",
     },
   },
-  palette: {
-    // mode: "light",
-    // primary: {
-    //   main: "#333333",
-    // },
-    // secondary: {
-    //   main: "#E9345B",
-    // },
-    // error: {
-    //   main: "#c71668",
-    // },
-    // warning: {
-    //   main: "#DC9D00",
-    // },
-  },
+  palette: {},
   breakpoints: {
     values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-      mobile: 100,
-      tablet: 100,
-      laptop: 100,
-      desktop: 100,
+      mobile: 0,
+      tablet: 768,
+      laptop: 992,
+      desktop: 1286,
     },
   },
   mixins: {
