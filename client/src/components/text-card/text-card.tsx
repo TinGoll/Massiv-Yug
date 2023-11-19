@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SxProps, styled } from "@mui/material/styles";
+import { SxProps } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { ReactNode } from "@mdx-js/react/lib";
@@ -72,12 +72,7 @@ const TextCard: React.FC<Props> = ({
           justifyContent: "flex-end",
         }}
       >
-        <Typography
-          sx={{
-            margin: 0,
-          }}
-          variant="bigNumber"
-        >
+        <Typography variant="bigNumber">
           {number}
         </Typography>
       </Grid>
