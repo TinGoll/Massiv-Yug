@@ -3,7 +3,6 @@ import {
   AppBarProps,
   useTheme,
   Container,
-  Button,
 } from "@mui/material";
 import React from "react";
 import HeaderLogo from "../header-logo/header-logo";
@@ -34,8 +33,9 @@ const Header: React.FC<Props> = ({ sticky, sx, ...props }) => {
         <Toolbar
           sx={{
             height: {
-              mobile: 96,
-              tablet: 138,
+              mobile: 66,
+              tablet: 96,
+              laptop: 138,
             },
           }}
         >

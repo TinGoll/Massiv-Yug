@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 
 const NavigationItem = styled("li")`
-  margin: 0 10px;
+  /* margin: 0 10px; */
   height: 100%;
   display: flex;
   align-items: center;

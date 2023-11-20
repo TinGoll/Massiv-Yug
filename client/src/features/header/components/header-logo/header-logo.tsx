@@ -6,7 +6,7 @@ import { Box, Typography, styled } from "@mui/material";
 const LogoTitle = styled(Typography)`
   color: #fff;
   font-family: Orchidea Pro;
-  font-size: 29px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: 133%; /* 38.57px */
@@ -29,14 +29,48 @@ const HeaderLogo = () => {
         sx={{
           display: "flex",
           justifyContent: "flex-start",
-          gap: 4,
+          gap: {
+            mobile: 2,
+            desktop: 4,
+          },
           alignItems: "center",
+
         }}
       >
-        <Logo />
+        <Box
+          sx={{
+            svg: {
+              height: {
+                desktop: 66,
+              },
+              width: {
+                desktop: 66,
+              },
+            },
+          }}
+        >
+          <Logo height={42} width={42} />
+        </Box>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <LogoTitle>Массив-юг</LogoTitle>
-          <LogoSubtitle>от идеи до воплощения в каждой мелочи</LogoSubtitle>
+          <LogoTitle
+            sx={{
+              fontSize: {
+                desktop: 29,
+              },
+            }}
+          >
+            Массив-юг
+          </LogoTitle>
+          <LogoSubtitle
+            sx={{
+              display: {
+                mobile: "none",
+                desktop: "block",
+              },
+            }}
+          >
+            от идеи до воплощения в каждой мелочи
+          </LogoSubtitle>
         </Box>
       </Box>
     </Link>

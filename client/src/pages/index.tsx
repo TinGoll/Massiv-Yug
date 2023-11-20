@@ -6,16 +6,17 @@ import { ElevationScroll, Header, Offset } from "../features/header";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
-      <ElevationScroll>
-        <Header />
-      </ElevationScroll>
-      <Box
+      {/* <ElevationScroll>
+      </ElevationScroll> */}
+        <Header sticky />
+      <Offset />
+      {/* <Box
         sx={(theme) => ({
           height: "50vh",
           bgcolor: alpha(theme.colors.light.secondary, 0.9),
           pt: 24,
         })}
-      ></Box>
+      ></Box> */}
       <Container maxWidth="desktop">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel commodi
         eveniet eos repellendus tempora. Neque nam nobis rerum aliquid cumque.

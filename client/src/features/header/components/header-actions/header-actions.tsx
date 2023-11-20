@@ -1,16 +1,18 @@
-import { Box, Button, styled } from "@mui/material";
-import React from "react";
+import { Box, Button, IconButton, Typography, styled, alpha } from "@mui/material";
+import React, { useState } from "react";
 import { PHONE_NUMBER, WHATSAPP_TEXT } from "../../constants/constants";
 import { formatPhone } from "../../../../utils";
-import { Whatsapp, Phone } from "../../../../assets/icons";
+import { Whatsapp, Phone, MobileMenu } from "../../../../assets/icons";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Container = styled(Box)`
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   position: relative;
   height: 100%;
+  gap: 16px;
 `;
 
 const PhoneLink = styled("a")`
@@ -22,11 +24,17 @@ const PhoneLink = styled("a")`
   display: flex;
   align-items: center;
   gap: 6px;
+  gap: 8px;
+  align-items: center;
 `;
 
 const LinkBox = styled(Box)`
-  position: absolute;
-  top: calc(50% + 22px);
+  display: flex;
+  align-items: center;
+  ${({ theme }) => theme.breakpoints.up("laptop")} {
+    position: absolute;
+    top: calc(50% + 24px);
+  }
 `;
 
 const WhatsAppButton = styled(Button)`
@@ -44,6 +52,7 @@ const WhatsAppButton = styled(Button)`
 `;
 
 const HeaderActions = () => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
   const handleWhatsAppClick = () => {
     const phoneNumber = PHONE_NUMBER.slice(1);
     const message = WHATSAPP_TEXT;
@@ -54,25 +63,90 @@ const HeaderActions = () => {
   };
 
   return (
-    <Container sx={{ width: 176 }}>
+    <Container
+      sx={{
+        width: {
+          mobile: "auto",
+          laptop: 176,
+        },
+      }}
+    >
+      <IconButton
+        size="large"
+        color="inherit"
+        onClick={() => setOpenMenu((prev) => !prev)}
+        sx={{
+          display: {
+            laptop: "none",
+          },
+        }}
+      >
+        {openMenu ? (
+          <CloseIcon fontSize="inherit" />
+        ) : (
+          <MobileMenu height={28} width={28} fill="white" />
+        )}
+      </IconButton>
+
       <Button
         variant="outlined"
         color="inherit"
-        sx={{ width: "100%", alignSelf: "center" }}
+        sx={{
+          width: {
+            mobile: "auto",
+            laptop: "100%",
+          },
+          alignSelf: "center",
+          display: {
+            mobile: "none",
+            laptop: "initial",
+          },
+        }}
       >
         ЛК Клиента
       </Button>
+
       <LinkBox>
-        <PhoneLink href={`tel:${PHONE_NUMBER}`} sx={{ display: "none" }}>
-          <Phone height={28} width={28} /> {formatPhone(PHONE_NUMBER)}
-        </PhoneLink>
         <WhatsAppButton
           variant="text"
           color="inherit"
           onClick={handleWhatsAppClick}
         >
-          <Whatsapp height={30} width={30} /> {formatPhone(PHONE_NUMBER)}
+          <Whatsapp height={30} width={30} />
+          <Typography
+            sx={{
+              display: {
+                mobile: "none",
+                laptop: "block",
+              },
+            }}
+          >
+            {formatPhone(PHONE_NUMBER)}
+          </Typography>
         </WhatsAppButton>
+
+        <PhoneLink
+          href={`tel:${PHONE_NUMBER}`}
+          sx={{
+            display: {
+              mobile: "flex",
+              laptop: "none",
+            },
+          }}
+        >
+          <Phone height={28} width={28} />
+          <Typography
+            sx={{
+              display: {
+                mobile: "none",
+                tablet: "block",
+                laptop: "none",
+              },
+            }}
+          >
+            {formatPhone(PHONE_NUMBER)}
+          </Typography>
+        </PhoneLink>
       </LinkBox>
     </Container>
   );

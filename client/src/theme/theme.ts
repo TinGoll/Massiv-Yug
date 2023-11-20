@@ -124,8 +124,11 @@ export const themeOptions: ThemeOptions = {
   },
   mixins: {
     toolbar: {
-      minHeight: 90,
-      "@media (min-width:600px)": {
+      minHeight: 68,
+      "@media (min-width:768px)": {
+        minHeight: 96,
+      },
+      "@media (min-width:992px)": {
         minHeight: 138,
       },
     },

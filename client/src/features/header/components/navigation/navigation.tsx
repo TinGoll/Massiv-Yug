@@ -6,6 +6,10 @@ const Nav = styled("nav")`
   height: 100%;
   padding: 0;
   margin: 0;
+  display: none;
+  ${({ theme }) => theme.breakpoints.up("laptop")} {
+    display: block;
+  }
 `;
 
 const Ul = styled("ul")`
@@ -15,6 +19,13 @@ const Ul = styled("ul")`
   height: 100%;
   display: flex;
   align-items: center;
+  gap: 20px;
+  li a {
+    font-size: 15px;
+    ${({ theme }) => theme.breakpoints.up("desktop")} {
+      font-size: 16px;
+    }
+  }
 `;
 
 const Navigation: React.FC<Props> = ({ ...props }) => {
