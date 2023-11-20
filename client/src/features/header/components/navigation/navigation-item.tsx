@@ -25,12 +25,15 @@ const NavigationItem = styled("li")`
       content: "";
       position: absolute;
       width: 0;
-      height: 4px;
+      height: 3px;
       background-color: ${({ theme }) => theme.colors.light.tertiary};
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      border-radius: 2px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
       transition: width 0.3s ease;
     }
 
