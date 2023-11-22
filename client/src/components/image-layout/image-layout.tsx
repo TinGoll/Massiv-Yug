@@ -3,7 +3,7 @@ import React from "react";
 
 const ImageLayout: React.FC<Props> = ({ width, height, sx, adaptive, ...props }) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("tablet"));
 
   const calculateRadius = () => {
     if (isMobile && adaptive) {
