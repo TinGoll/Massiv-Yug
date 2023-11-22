@@ -1,4 +1,5 @@
 import ActionButton from "./action-button/action-button";
+import { Block } from "./block/block";
 import HeaderBlock from "./header-block/header-block";
 import ImageLayout from "./image-layout/image-layout";
 import PrintedText from "./printed-text/printed-text";
@@ -12,4 +13,5 @@ export {
   ActionButton,
   HeaderBlock,
   PrintedText,
+  Block,
 };
