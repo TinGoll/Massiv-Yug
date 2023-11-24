@@ -5,6 +5,7 @@ import ImageLayout from "./image-layout/image-layout";
 import PrintedText from "./printed-text/printed-text";
 import RoundButton from "./round-button/round-button";
 import RoundIcon from "./round-icon/round-icon";
+import TitleBlock from "./title-block/title-block";
 
 export {
   ImageLayout,
@@ -14,4 +15,5 @@ export {
   HeaderBlock,
   PrintedText,
   Block,
+  TitleBlock,
 };
