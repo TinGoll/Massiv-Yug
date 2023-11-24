@@ -1,0 +1,26 @@
+.swiperContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperSlide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.swiperImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Или другие значения в зависимости от ваших требований */
+  object-position: center bottom; /* Задает позицию изображения внутри контейнера */
+}
