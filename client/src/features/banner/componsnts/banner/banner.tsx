@@ -31,6 +31,7 @@ const Banner: React.FC = () => {
 
   return (
     <Block
+      id="banner"
       sx={{
         minHeight: "100vh",
         position: "relative",

@@ -4,12 +4,14 @@ import { Box, Button, Container, Typography, alpha } from "@mui/material";
 import { ElevationScroll, Header, Offset } from "../features/header";
 import { Banner } from "../features/banner";
 import Layout from "../layouts/layout";
+import CarouselBlock from "../features/carousel-block";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <main>
         <Banner />
+        <CarouselBlock />
         <div>
           <Container maxWidth="desktop">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nobis
