@@ -1,5 +1,5 @@
 export const banerListItems = {
-  DOORS: "Двери",
+  DOORS: "Дверь",
   FURNITURE: "Мебель",
   KITCHEN: "Кухню",
   STAIRS: "Лестницу",

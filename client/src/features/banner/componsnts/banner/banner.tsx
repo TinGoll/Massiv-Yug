@@ -218,6 +218,7 @@ const Banner: React.FC = () => {
               <Box
                 sx={{
                   display: "flex",
+                  marginTop: 4,
                   flexDirection: {
                     mobile: "row",
                     laptop: "column",
@@ -227,7 +228,7 @@ const Banner: React.FC = () => {
                     laptop: "center",
                   },
                   alignItems: "center",
-                  gap: "32px",
+                  gap: "25px",
                 }}
               >
                 <Box
@@ -236,14 +237,13 @@ const Banner: React.FC = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    marginTop: 4,
                   }}
                 >
                   <Guarantee />
                   <Title
                     sx={{
                       position: "absolute",
-                      top: "50%",
+                      top: "calc(50% + 10px)",
                       left: "50%",
                       transform: "translate(-50%, -50%)",
                       fontSize: "82px",
