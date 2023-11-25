@@ -1,10 +1,10 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { Box, Button, Container, Typography, alpha } from "@mui/material";
-import { ElevationScroll, Header } from "../features/header";
+import { Container } from "@mui/material";
 import { Banner } from "../features/banner";
 import Layout from "../layouts/layout";
 import CarouselBlock from "../features/carousel-block";
+import { OrderProcessBlock } from "../features/order-process-block";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -12,6 +12,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <Banner />
         <CarouselBlock />
+        <OrderProcessBlock />
         <div>
           <Container maxWidth="desktop">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nobis

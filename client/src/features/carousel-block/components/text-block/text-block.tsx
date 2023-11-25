@@ -1,21 +1,15 @@
 import { Typography, useTheme } from "@mui/material";
 import { Link } from "gatsby";
 import React from "react";
+import { TitleBlock } from "../../../../components";
 
 const TextBlock = () => {
   const theme = useTheme();
   return (
     <>
-      <Typography
-        variant="h2"
-        sx={(theme) => ({
-          ...theme.typography.title,
-          textAlign: "center",
-          mt: 8,
-        })}
-      >
+      <TitleBlock mt={8}>
         Уникальная текстура <br /> натурального дерева
-      </Typography>
+      </TitleBlock>
       <Typography
         variant="h3"
         sx={{

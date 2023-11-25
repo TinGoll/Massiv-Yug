@@ -6,10 +6,16 @@ import * as styles from "./carousel.module.css";
 import "swiper/css";
 import { ImageLayout } from "../../../../components";
 
+// Временно, пока нет сервера.
 const variannts = [
-  "/images/doors.jpg",
-  "/images/furniture.jpg",
-  "/images/stairs.jpg",
+  "/images/classic1.jpg",
+  "/images/classic2.jpg",
+  "/images/modern.jpg",
+  "/images/neoberta.jpg",
+  "/images/portafino.jpg",
+  "/images/jaluzi.jpg",
+  "/images/florencia.jpg",
+  "/images/flora.jpg",
 ];
 
 const Сarousel: React.FC<Props> = ({ category }) => {
@@ -17,8 +23,10 @@ const Сarousel: React.FC<Props> = ({ category }) => {
     <Swiper
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
-      slidesPerView={5}
-      spaceBetween={20}
+      slidesPerView={"auto"}
+      // centeredSlides={true}
+      speed={200}
+      spaceBetween={30}
       direction="horizontal"
       mousewheel={true}
       loop={true}
@@ -31,7 +39,7 @@ const Сarousel: React.FC<Props> = ({ category }) => {
         .map((item, i) => {
           return (
             <SwiperSlide key={i} className={styles.slide}>
-              <ImageLayout height={300} width={200}>
+              <ImageLayout height={358} width={236}>
                 <img src={item} alt={item} />
               </ImageLayout>
             </SwiperSlide>

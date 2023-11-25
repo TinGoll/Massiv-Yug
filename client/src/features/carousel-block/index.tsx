@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Block, HeaderBlock, Offset } from "../../components";
-import { Container } from "@mui/material";
+import { Block, HeaderBlock, Offset, RoundButton } from "../../components";
+import { Box, Container } from "@mui/material";
 import ActionButtons from "./components/action-buttons";
 import { buttonsList } from "./constants/buttons-list";
 import TextBlock from "./components/text-block/text-block";
@@ -20,6 +20,11 @@ const CarouselBlock = () => {
           list={buttonsList}
         />
         <Carousel category={category} />
+        <Box sx={{ display: "flex", justifyContent: "center", mt: '100px' }}>
+          <RoundButton height={100} width={280}>
+            Смотреть еще
+          </RoundButton>
+        </Box>
       </Container>
     </Block>
   );
