@@ -3,8 +3,7 @@ import { Block, HeaderBlock, RoundButton } from "../../../../components";
 import TitleBlock from "../../../../components/title-block/title-block";
 import TextCard from "../../../../components/text-card/text-card";
 import { arrayCardItems } from "../../constants/constants";
-import Grid from "@mui/material/Grid";
-import { Container, Divider, Theme, useMediaQuery } from "@mui/material";
+import { Container, Divider, Grid, Theme, useMediaQuery } from "@mui/material";
 
 const OrderProcessBlock = () => {
   const isMobile = useMediaQuery<Theme>((theme) =>
@@ -17,7 +16,7 @@ const OrderProcessBlock = () => {
 
   return (
     <Block
-      id="3"
+      id="03"
       sx={{
         display: "grid",
         justifyItems: "center",

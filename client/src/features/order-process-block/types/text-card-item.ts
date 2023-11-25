@@ -1,8 +1,7 @@
-
 import { ReactNode } from "react";
 
 export interface TextCardItem {
-  icon?:ReactNode;
+  icon?: ReactNode;
   title?: string;
   number?: number;
   text?: string;
