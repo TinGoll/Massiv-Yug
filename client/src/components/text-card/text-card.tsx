@@ -1,8 +1,7 @@
-import * as React from "react";
+import React, { ReactElement, ReactNode } from "react";
 import { SxProps } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { ReactNode } from "@mdx-js/react/lib";
 import { RoundIcon } from "..";
 
 interface Props {
@@ -10,6 +9,7 @@ interface Props {
   title?: string;
   number?: number;
   button?: ReactNode;
+  iconColorPrimary?: boolean;
   children?: ReactNode;
   sx?: SxProps;
 }
@@ -19,11 +19,11 @@ const TextCard: React.FC<Props> = ({
   title,
   number,
   button,
+  iconColorPrimary,
   children,
   sx,
   ...props
-}) => { 
-
+}) => {
   return (
     <Grid
       container
@@ -31,6 +31,7 @@ const TextCard: React.FC<Props> = ({
       spacing={0}
       sx={[
         {
+          backgroundColor: iconColorPrimary ? "#FFC0993D" : "",
           overflow: "hidden",
           padding: {
             mobile: "15px",
@@ -53,9 +54,12 @@ const TextCard: React.FC<Props> = ({
         gridArea="icon"
         sx={{
           display: icon ? "initial" : "none",
+          marginTop: number ? "0px" : "18px",
         }}
       >
-        <RoundIcon>{icon}</RoundIcon>
+        <RoundIcon color={iconColorPrimary ? "primary" : "secondary"}>
+          {icon}
+        </RoundIcon>
       </Grid>
 
       {/* цифра */}
@@ -65,16 +69,14 @@ const TextCard: React.FC<Props> = ({
         sx={{
           display: number
             ? {
-              mobile: "none",
-              tablet: "flex",
+                mobile: "none",
+                tablet: "flex",
               }
             : "none",
           justifyContent: "flex-end",
         }}
       >
-        <Typography variant="bigNumber">
-          {number}
-        </Typography>
+        <Typography variant="bigNumber">{number}</Typography>
       </Grid>
 
       {/* загаловок */}
@@ -87,10 +89,10 @@ const TextCard: React.FC<Props> = ({
             mobile: "0px",
             tablet: number ? "20px" : "29px",
           },
-          marginLeft:{
-            mobile:"15px",
-            tablet:"0px",
-          }
+          marginLeft: {
+            mobile: "15px",
+            tablet: "0px",
+          },
         }}
       >
         <Typography
@@ -139,7 +141,7 @@ const TextCard: React.FC<Props> = ({
           justifyContent: "center",
           marginTop: {
             mobile: "26px",
-            tablet: "16px",            
+            tablet: "16px",
           },
         }}
       >
