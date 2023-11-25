@@ -4,14 +4,7 @@ import TitleBlock from "../../../../components/title-block/title-block";
 import TextCard from "../../../../components/text-card/text-card";
 import { arrayCardItems } from "../../constants/constants";
 import Grid from "@mui/material/Grid";
-import {
-  Box,
-  Container,
-  Divider,
-  Theme,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Container, Divider, Theme, useMediaQuery } from "@mui/material";
 
 const OrderProcessBlock = () => {
   const isMobile = useMediaQuery<Theme>((theme) =>
@@ -31,7 +24,7 @@ const OrderProcessBlock = () => {
       }}
     >
       <Container maxWidth="desktop">
-        <HeaderBlock number={3} text={"Как мы работаем"}/>
+        <HeaderBlock number={3} text={"Как мы работаем"} />
         <TitleBlock
           sx={{
             margin: {
