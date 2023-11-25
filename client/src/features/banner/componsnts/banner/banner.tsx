@@ -43,7 +43,7 @@ const Banner: React.FC = () => {
         <Box
           display="grid"
           sx={{
-            height: "100vh",
+            minHeight: "100vh",
             gridTemplateColumns: {
               mobile: "1fr",
               laptop: "1fr auto",
