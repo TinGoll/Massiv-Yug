@@ -4,6 +4,7 @@ import TitleBlock from "../../../../components/title-block/title-block";
 import TextCard from "../../../../components/text-card/text-card";
 import { arrayCardItems } from "../../constants/constants";
 import { Container, Divider, Grid, Theme, useMediaQuery } from "@mui/material";
+import theme from "../../../../theme/theme";
 
 const OrderProcessBlock = () => {
   const isMobile = useMediaQuery<Theme>((theme) =>
@@ -63,7 +64,7 @@ const OrderProcessBlock = () => {
                       tablet: (index + 1) % 3 === 0 ? "none" : "solid",
                     },
                     borderRightWidth: "1px",
-                    borderRightColor: "#0000003D",
+                    borderRightColor: theme.palette.divider,
                     height: "100%",
                   }}
                 >
