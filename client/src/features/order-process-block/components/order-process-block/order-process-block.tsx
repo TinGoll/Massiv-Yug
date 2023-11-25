@@ -31,7 +31,7 @@ const OrderProcessBlock = () => {
       }}
     >
       <Container maxWidth="desktop">
-        <HeaderBlock number={3} text={"Как мы работаем"}></HeaderBlock>
+        <HeaderBlock number={3} text={"Как мы работаем"}/>
         <TitleBlock
           sx={{
             margin: {
@@ -75,7 +75,7 @@ const OrderProcessBlock = () => {
                     height: "100%",
                   }}
                 >
-                  <TextCard                    
+                  <TextCard
                     {...item}
                     iconColorPrimary={index === array.length - 1}
                   >
@@ -101,44 +101,7 @@ const OrderProcessBlock = () => {
                   <>
                     <Grid
                       item
-                      sx={{
-                        display: {
-                          mobile: "none",
-                          tablet: "initial",
-                        },
-                        marginTop: {
-                          mobile: "0px",
-                          tablet: "25px",
-                        },
-                        marginBottom: {
-                          mobile: "0px",
-                          tablet: "25px",
-                        },
-                      }}
-                    >
-                      <Divider />
-                    </Grid>
-                    <Grid
-                      item
-                      sx={{
-                        display: {
-                          mobile: "none",
-                          tablet: "initial",
-                        },
-                        marginTop: {
-                          mobile: "0px",
-                          tablet: "25px",
-                        },
-                        marginBottom: {
-                          mobile: "0px",
-                          tablet: "25px",
-                        },
-                      }}
-                    >
-                      <Divider />
-                    </Grid>
-                    <Grid
-                      item
+                      gridColumn="span 3"
                       sx={{
                         display: {
                           mobile: "none",

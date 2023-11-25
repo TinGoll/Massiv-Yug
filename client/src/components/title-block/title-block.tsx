@@ -1,9 +1,9 @@
-import { SxProps, Typography, TypographyProps } from "@mui/material";
-import React, { ReactNode } from "react";
+import { Typography, TypographyProps } from "@mui/material";
+import React  from "react";
 
 type Props = TypographyProps;
 
-const TitleBlock: React.FC<Props> = ({ sx }) => {
+const TitleBlock: React.FC<Props> = ({children, sx }) => {
   return (
     <Typography
       variant="h2"
@@ -18,7 +18,7 @@ const TitleBlock: React.FC<Props> = ({ sx }) => {
         }),
         ...(Array.isArray(sx) ? sx : [sx]),
       ]}
-    />
+    >{children}</Typography>
   );
 };
 
