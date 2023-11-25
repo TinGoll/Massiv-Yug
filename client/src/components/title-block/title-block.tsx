@@ -1,9 +1,9 @@
 import { Typography, TypographyProps } from "@mui/material";
-import React  from "react";
+import React from "react";
 
 type Props = TypographyProps;
 
-const TitleBlock: React.FC<Props> = ({children, sx }) => {
+const TitleBlock: React.FC<Props> = ({ children, sx, ...props }) => {
   return (
     <Typography
       variant="h2"
@@ -18,7 +18,10 @@ const TitleBlock: React.FC<Props> = ({children, sx }) => {
         }),
         ...(Array.isArray(sx) ? sx : [sx]),
       ]}
-    >{children}</Typography>
+      {...props}
+    >
+      {children}
+    </Typography>
   );
 };
 

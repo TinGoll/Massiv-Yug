@@ -1,5 +1,10 @@
 import React from "react";
-import { Block, HeaderBlock, RoundButton } from "../../../../components";
+import {
+  Block,
+  HeaderBlock,
+  Offset,
+  RoundButton,
+} from "../../../../components";
 import TitleBlock from "../../../../components/title-block/title-block";
 import TextCard from "../../../../components/text-card/text-card";
 import { arrayCardItems } from "../../constants/constants";
@@ -23,6 +28,7 @@ const OrderProcessBlock = () => {
         justifyItems: "center",
       }}
     >
+      <Offset />
       <Container maxWidth="desktop">
         <HeaderBlock number={3} text={"Как мы работаем"} />
         <TitleBlock
