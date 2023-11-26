@@ -23,8 +23,6 @@ const variannts = [
 const Сarousel: React.FC<Props> = ({ category }) => {
   return (
     <Swiper
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
       slidesPerView={"auto"}
       // centeredSlides={true}
       speed={200}

@@ -11,6 +11,9 @@ const TitleBlock: React.FC<Props> = ({ children, sx, ...props }) => {
         (theme) => ({
           ...theme.typography.title,
           textAlign: "center",
+          textTransform: "uppercase",
+          lineHeight: "117.5%",
+          letterSpacing: "-0.52px",
           fontSize: {
             mobile: "26px",
             tablet: "55px",
