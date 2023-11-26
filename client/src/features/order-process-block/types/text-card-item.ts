@@ -6,4 +6,5 @@ export interface TextCardItem {
   number?: number;
   text?: string;
   button?: ReactNode;
+  key: string;
 }
