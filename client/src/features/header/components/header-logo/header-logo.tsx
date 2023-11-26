@@ -57,6 +57,7 @@ const HeaderLogo = () => {
               fontSize: {
                 desktop: 29,
               },
+              letterSpacing: 2
             }}
           >
             Массив-юг

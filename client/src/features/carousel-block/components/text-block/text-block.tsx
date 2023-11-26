@@ -7,7 +7,7 @@ const TextBlock = () => {
   const theme = useTheme();
   return (
     <>
-      <TitleBlock mt={8}>
+      <TitleBlock mt={2}>
         Уникальная текстура <br /> натурального дерева
       </TitleBlock>
       <Typography
