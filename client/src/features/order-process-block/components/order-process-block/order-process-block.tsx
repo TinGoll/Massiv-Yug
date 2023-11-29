@@ -1,8 +1,12 @@
 import React from "react";
-import { Block, HeaderBlock, RoundButton } from "../../../../components";
+import {
+  Block,
+  HeaderBlock,
+  Offset,
+} from "../../../../components";
 import TitleBlock from "../../../../components/title-block/title-block";
-import { Container, Theme, useMediaQuery } from "@mui/material";
 import CardsBlock from "../cards-block/cards-block";
+import { Container, Theme, useMediaQuery } from "@mui/material";
 
 const OrderProcessBlock = () => {
   const isMobile = useMediaQuery<Theme>((theme) =>
@@ -21,6 +25,7 @@ const OrderProcessBlock = () => {
         justifyItems: "center",
       }}
     >
+      <Offset />
       <Container maxWidth="desktop">
         <HeaderBlock number={3} text={"Как мы работаем"} />
         <TitleBlock
@@ -33,7 +38,6 @@ const OrderProcessBlock = () => {
         >
           ПРОЦЕСС ЗАКАЗА
         </TitleBlock>
-
         <CardsBlock onClickFunc={onClickSignUpForATour} />
       </Container>
     </Block>
