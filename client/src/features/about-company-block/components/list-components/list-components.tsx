@@ -4,6 +4,10 @@ import { listItems } from "../../constants/constants";
 import PointIcon from "../../assets/point-icon";
 
 const Ul = styled("ul")`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -13,7 +17,6 @@ const Li = styled("li")`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-bottom: 10px;
 `;
 
 const ListComponents = () => {

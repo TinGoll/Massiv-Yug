@@ -14,8 +14,13 @@ const ImagesComponent = () => {
   );
 
   return (
-    <Box>
-      <Box display="flex" flexDirection="row" justifyContent="center">
+    <>
+      <Box
+        display="flex"
+        flexDirection="row"
+        justifyContent="center"
+        gap={"30px"}
+      >
         <ImageLayout width={isMobile ? 153 : 238} height={isMobile ? 235 : 366}>
           <StaticImage
             style={{
@@ -29,13 +34,7 @@ const ImagesComponent = () => {
           />
         </ImageLayout>
 
-        <ImageLayout
-          width={isMobile ? 153 : 238}
-          height={isMobile ? 235 : 366}
-          sx={{
-            marginLeft: "30px",
-          }}
-        >
+        <ImageLayout width={isMobile ? 153 : 238} height={isMobile ? 235 : 366}>
           <StaticImage
             style={{
               width: "100%",
@@ -54,14 +53,14 @@ const ImagesComponent = () => {
         flexDirection="row"
         marginTop={isMobile ? "10px" : "20px"}
         width={isMobile ? "100%" : 506}
+        gap={"10px"}
       >
         <Lamp width="40px" height="40px" />
         <Typography
           variant="text"
           fontSize={isMobile ? "15px" : "16px"}
           flex={1}
-          marginTop="30px"
-          marginLeft="10px"
+          paddingTop={"30px"}
         >
           Расширяйте пространство, изменяйте геометрию помещения, создавайте
           акценты{" "}
@@ -70,7 +69,7 @@ const ImagesComponent = () => {
           </BoldStyle>
         </Typography>
       </Box>
-    </Box>
+    </>
   );
 };
 

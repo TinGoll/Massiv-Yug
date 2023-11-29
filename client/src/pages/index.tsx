@@ -4,6 +4,7 @@ import { Box, Button, Container, Typography, alpha } from "@mui/material";
 import { ElevationScroll, Header } from "../features/header";
 import { Banner } from "../features/banner";
 import Layout from "../layouts/layout";
+import { AboutCompanyBlock } from "../features/about-company-block";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <Banner />
         <div>
+        <AboutCompanyBlock />
           <Container maxWidth="desktop">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nobis
             debitis sit necessitatibus quis voluptatibus at, sint eligendi

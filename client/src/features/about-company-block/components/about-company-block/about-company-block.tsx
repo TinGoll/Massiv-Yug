@@ -18,7 +18,7 @@ const Crimson = styled("span")`
 
 const AboutCompanyBlock = () => {
   const isMobile = useMediaQuery<Theme>((theme) =>
-    theme.breakpoints.down("tablet")
+    theme.breakpoints.down("laptop")
   );
 
   const onClickMoreDetails = () => {
@@ -35,6 +35,7 @@ const AboutCompanyBlock = () => {
     >
       <Offset />
       <Container maxWidth="desktop">
+
         <HeaderBlock number={5} text={"О компании"} />
 
         <TitleBlock
@@ -44,6 +45,7 @@ const AboutCompanyBlock = () => {
         >
           КАЧЕСТВЕННАЯ СТИЛЬНАЯ МЕБЕЛЬ
         </TitleBlock>
+        
 
         <Grid
           container
@@ -54,8 +56,9 @@ const AboutCompanyBlock = () => {
               ? `'text1' 'images' 'text2' 'list' 'button'`
               : `'images text1' 'images text2' 'images list' 'images button'`
           }
-          gridTemplateColumns={isMobile ? "auto" : "auto 1f"}
-          columnSpacing="90px"
+          gridTemplateColumns={isMobile ? "1fr" : "auto 1fr"}
+          // columnSpacing="90px"
+          gap={"0 90px"}
           rowSpacing={isMobile ? "20px" : "35px"}
         >
           <Grid item gridArea="text1">
@@ -89,7 +92,7 @@ const AboutCompanyBlock = () => {
             <ListComponents />
           </Grid>
 
-          <Grid item gridArea="button">
+          <Grid item gridArea="button" margin={"0 auto"}>
             <RoundButton
               onClick={onClickMoreDetails}
               height={isMobile ? 86 : 100}
@@ -99,7 +102,7 @@ const AboutCompanyBlock = () => {
             </RoundButton>
           </Grid>
           <Grid item gridArea="images">
-            <ImagesComponent></ImagesComponent>
+            <ImagesComponent />
           </Grid>
         </Grid>
       </Container>
