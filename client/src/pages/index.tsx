@@ -5,6 +5,7 @@ import { Banner } from "../features/banner";
 import Layout from "../layouts/layout";
 import CarouselBlock from "../features/carousel-block";
 import { OrderProcessBlock } from "../features/order-process-block";
+import AdvantagesBlock from "../features/advantages-block";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -12,6 +13,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <Banner />
         <CarouselBlock />
+        <AdvantagesBlock />
         <OrderProcessBlock />
         <div>
           <Container maxWidth="desktop">

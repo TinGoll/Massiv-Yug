@@ -44,7 +44,15 @@ const HeaderBlock: React.FC<Props> = ({ darkTheme, number, text, sx }) => {
       >
         {number.toString().padStart(2, "0")}
       </Typography>
-      <Divider orientation="vertical" flexItem />
+      <Divider
+        orientation="vertical"
+        flexItem
+        sx={{
+          bgcolor: darkTheme
+            ? "rgba(255, 255, 255, 0.44)"
+            : theme.palette.divider,
+        }}
+      />
       <Typography
         sx={{
           ...theme.typography.blockHeader,
