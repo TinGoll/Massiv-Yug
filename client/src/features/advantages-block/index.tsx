@@ -4,6 +4,7 @@ import BgIcon from "./components/bg-icon/bg-icon";
 import { Box, Container } from "@mui/material";
 import InfoBlock from "./components/info-block/info-block";
 import GraphicBlock from "./components/graphic-block/graphic-block";
+import GraphicBlockMobile from "./components/graphic-block-mobile/graphic-block-mobile";
 
 const AdvantagesBlock: React.FC = () => {
   return (
@@ -30,7 +31,8 @@ const AdvantagesBlock: React.FC = () => {
           </TitleBlock>
           <InfoBlock />
         </Container>
-        <GraphicBlock />
+        <GraphicBlock  />
+        <GraphicBlockMobile />
         <Offset />
       </Box>
     </Block>

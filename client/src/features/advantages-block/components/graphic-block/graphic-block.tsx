@@ -13,6 +13,9 @@ const BlockContainer = styled("div")`
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+  ${({ theme }) => theme.breakpoints.down("desktop")} {
+    display: none;
+  }
 `;
 
 const GraphicBlock = () => {

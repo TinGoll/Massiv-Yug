@@ -10,43 +10,71 @@ const ImageContainer = styled(Box)`
   background: #ffc099;
 `;
 
-const WatchBox = styled(Box)`
-  width: 306px;
-  height: 306px;
-  background: none transparent;
-  position: absolute;
-  bottom: calc(-50% + 30px);
-  left: 50px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-const ImgBox = styled(Box)`
-  position: relative;
+const ImgBox = styled("div")`
   width: 100%;
   height: 100%;
   background: none transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   img {
-    width: 540px;
-    height: 540px;
-    position: absolute;
-    top: calc(-50% + 200px);
-    left: -100px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    scale: 1.1;
   }
 `;
+
+const WatchBox = styled("div")`
+  width: 260px;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  transform: translate(50%, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+`;
+
+// const ImgBox = styled(Box)`
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   background: none transparent;
+//   overflow: hidden;
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//   }
+// `;
 
 const WatchSection = () => {
   return (
     <ImageContainer>
       <ImgBox>
+        <StaticImage
+          src="../../../../images/advantages/boxes.png"
+          alt="boxes"
+        />
+      </ImgBox>
+      <WatchBox>
+        <StaticImage
+          src="../../../../images/advantages/watch.png"
+          alt="watch"
+        />
+      </WatchBox>
+      {/* <ImgBox>
         <StaticImage
           objectFit="cover"
           src="../../../../images/advantages/boxes.png"
@@ -59,7 +87,7 @@ const WatchSection = () => {
           src="../../../../images/advantages/watch.png"
           alt="watch"
         />
-      </WatchBox>
+      </WatchBox> */}
     </ImageContainer>
   );
 };
