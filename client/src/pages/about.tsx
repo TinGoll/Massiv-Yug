@@ -13,6 +13,7 @@ import {
   WhatWeProduceBlock,
 } from "../features/about-blocks";
 
+
 const About = () => {
   return (
     <LayoutFixed>
