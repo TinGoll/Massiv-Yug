@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  client:
+    container_name: massiv-yug-client
+    build: ./client
+    environment:
+      - GATSBY_API_HOST=https://massiv-yug.ru
+      - GATSBY_API_PORT=3000
+    volumes:
+      - www-html:/usr/share/nginx/html
+    networks:
+      massiv-yug:
+        aliases:
+          - client
+  nginx:
+    image: nginx:latest
+    container_name: massiv-yug-nginx
+    depends_on:
+      - client
+    ports:
+      - "8000:8000"
+    volumes:
+      - www-html:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      massiv-yug:
+        aliases:
+          - nginx
+
+volumes:
+  www-html:
+
+networks:
+  massiv-yug:
+    driver: bridge
