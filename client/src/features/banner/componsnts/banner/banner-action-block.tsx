@@ -32,7 +32,7 @@ const BannerActionBlock: React.FC<Props> = ({ typingStatus }) => {
           variant="h1"
           sx={{
             fontSize: {
-              mobile: "36px",
+              mobile: "26px",
               desktop: "50px",
             },
             textAlign: {
@@ -52,7 +52,7 @@ const BannerActionBlock: React.FC<Props> = ({ typingStatus }) => {
           variant="h1"
           sx={{
             fontSize: {
-              mobile: "36px",
+              mobile: "26px",
               desktop: "50px",
             },
             textAlign: {
@@ -82,19 +82,16 @@ const BannerActionBlock: React.FC<Props> = ({ typingStatus }) => {
           до мельчайших подробностей!
         </BannerSubtitle>
       </Box>
-      <RoundButton
-        height={100}
-        sx={{
-          fontWeight: 300,
-          width: {
-            mobile: "100%",
-            laptop: 300,
-          },
-          maxWidth: 450,
-        }}
-      >
-        Рассчитать стоимость
-      </RoundButton>
+      <Box>
+        <RoundButton
+          height={100}
+          sx={{
+            fontWeight: 300,
+          }}
+        >
+          Рассчитать стоимость
+        </RoundButton>
+      </Box>
     </Box>
   );
 };
