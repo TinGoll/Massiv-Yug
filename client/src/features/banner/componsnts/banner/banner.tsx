@@ -39,6 +39,7 @@ const Banner: React.FC = () => {
     >
       <BannerSwiper ref={swiperRef} />
       <BannerMask />
+
       <Container maxWidth="desktop" sx={{ position: "relative" }}>
         <Box
           display="grid"
@@ -49,7 +50,6 @@ const Banner: React.FC = () => {
               laptop: "1fr auto",
             },
             gridTemplateRows: {
-              mobile: "auto",
               laptop: "100%",
             },
           }}

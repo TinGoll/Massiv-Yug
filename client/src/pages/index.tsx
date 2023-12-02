@@ -7,12 +7,18 @@ import Layout from "../layouts/layout";
 import { AboutCompanyBlock } from "../features/about-company-block";
 import CarouselBlock from "../features/carousel-block";
 import { OrderProcessBlock } from "../features/order-process-block";
+import AdvantagesBlock from "../features/advantages-block";
+import PartnerBlock from "../features/partner-block";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <main>
         <Banner />
+        <CarouselBlock />
+        <AdvantagesBlock />
+        <OrderProcessBlock />
+        <PartnerBlock />
         <div>
           <Container maxWidth="desktop">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nobis

@@ -1,12 +1,18 @@
 import { Box, BoxProps, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 
-const ImageLayout: React.FC<Props> = ({ width, height, sx, adaptive, ...props }) => {
+const ImageLayout: React.FC<Props> = ({
+  width,
+  height,
+  sx,
+  rectangle,
+  ...props
+}) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("tablet"));
 
   const calculateRadius = () => {
-    if (isMobile && adaptive) {
+    if (rectangle) {
       return 40;
     } else {
       return Math.min(Number(width), Number(height)) / 2;
@@ -27,5 +33,5 @@ const ImageLayout: React.FC<Props> = ({ width, height, sx, adaptive, ...props })
 
 export default ImageLayout;
 interface Props extends BoxProps {
-    adaptive?: boolean;
+  rectangle?: boolean;
 }

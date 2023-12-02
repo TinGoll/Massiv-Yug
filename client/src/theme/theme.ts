@@ -39,6 +39,8 @@ declare module "@mui/material/styles" {
     bigNumber: React.CSSProperties;
     blockHeader: React.CSSProperties;
     blockNumber: React.CSSProperties;
+    fontBreadcrumbs: React.CSSProperties;
+    fontForItemsImage: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
@@ -49,6 +51,8 @@ declare module "@mui/material/styles" {
     bigNumber?: React.CSSProperties;
     blockHeader?: React.CSSProperties;
     blockNumber?: React.CSSProperties;
+    fontBreadcrumbs?: React.CSSProperties;
+    fontForItemsImage?: React.CSSProperties;
   }
 }
 
@@ -61,6 +65,8 @@ declare module "@mui/material/Typography" {
     bigNumber: true;
     blockHeader: true;
     blockNumber: true;
+    fontBreadcrumbs: true;
+    fontForItemsImage: true;
   }
 }
 
@@ -111,6 +117,21 @@ export const themeOptions: ThemeOptions = {
       fontWeight: 400,
       lineHeight: "35.91px",
       color: "#FFC099",
+    },
+    fontBreadcrumbs: {
+      color: "#000",
+      fontSize: "16px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "133%",
+    },
+    fontForItemsImage: {
+      color: "#000",
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: "500",
+      lineHeight: "143.5%",
+      letterSpacing: "-0.36px",
     },
   },
   palette: {},
