@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Breadcrumbs, SxProps, Typography } from "@mui/material";
 import { Link } from "gatsby";
 import Delimiter from "../../assets/icons/delimiter";
@@ -10,6 +10,34 @@ interface Props {
   sx?: SxProps;
 }
 
+interface PropsText {
+  last?: boolean;
+  first?: boolean;
+  children: ReactNode;
+  sx?: SxProps;
+}
+
+const Text: React.FC<PropsText> = ({ last, first, children, sx, ...props }) => {
+  return (
+    <Typography
+      variant="body1"
+      sx={[
+        {
+          ...theme.typography.fontBreadcrumbs,
+          marginLeft: first ? "0px" : "23px",
+          marginRight: last ? "0px" : "23px",
+          color: last ? theme.colors.light.primary : "#000",
+          fontWeight: last ? 300 : 500,
+        },
+        ...(Array.isArray(sx) ? sx : [sx]),
+      ]}
+      {...props}
+    >
+      {children}
+    </Typography>
+  );
+};
+
 const BreadcrumbsComp: React.FC<Props> = ({ adress, links, sx, ...props }) => {
   return (
     <Breadcrumbs
@@ -20,37 +48,14 @@ const BreadcrumbsComp: React.FC<Props> = ({ adress, links, sx, ...props }) => {
       {adress.map((item, index, array) => {
         return links && index < links.length ? (
           <Link key={`${index}:${item}`} to={links[index]}>
-            <Typography
-              variant="body1"
-              marginLeft={index > 0 ? "23px" : "0px"}
-              marginRight={index < array.length - 1 ? "23px" : "0px"}
-              sx={{
-                ...theme.typography.fontBreadcrumbs,
-                color:
-                  array.length - 1 > index
-                    ? "#000"
-                    : theme.colors.light.primary,
-                fontWeight: array.length - 1 > index ? 500 : 300,
-              }}
-            >
+            <Text first={index === 0} last={index === array.length - 1}>
               {item}
-            </Typography>
+            </Text>
           </Link>
         ) : (
-          <Typography
-            key={`${index}:${item}`}
-            variant="body1"
-            marginLeft={index > 0 ? "23px" : "0px"}
-            marginRight={index < array.length - 1 ? "23px" : "0px"}
-            sx={{
-              ...theme.typography.fontBreadcrumbs,
-              color:
-                array.length - 1 > index ? "#000" : theme.colors.light.primary,
-              fontWeight: array.length - 1 > index ? 500 : 300,
-            }}
-          >
+          <Text first={index === 0} last={index === array.length - 1}>
             {item}
-          </Typography>
+          </Text>
         );
       })}
     </Breadcrumbs>
