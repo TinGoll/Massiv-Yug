@@ -1,18 +1,14 @@
 import React from "react";
-import Layout from "../layouts/layout";
-import { Banner } from "../features/banner";
-
 import { HeadFC } from "gatsby";
 import LayoutFixed from "../layouts/layout-fixed";
 import { Block, Offset } from "../components";
-import { Breadcrumbs, Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import { BreadcrumbsBlock } from "../features/breadcrumbs-block";
 import {
   FromIdeaBlock,
   ImagesBanerBlock,
   WhatWeProduceBlock,
 } from "../features/about-blocks";
-
 
 const About = () => {
   return (

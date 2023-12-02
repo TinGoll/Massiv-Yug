@@ -8,6 +8,7 @@ function Delimiter(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 30 1"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <rect width="30" height="1" fill="black" />
     </svg>
