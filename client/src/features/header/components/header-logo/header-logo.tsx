@@ -12,6 +12,9 @@ const LogoTitle = styled(Typography)`
   line-height: 133%; /* 38.57px */
   letter-spacing: -0.58px;
   text-transform: uppercase;
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 const LogoSubtitle = styled(Typography)`
@@ -34,7 +37,6 @@ const HeaderLogo = () => {
             desktop: 4,
           },
           alignItems: "center",
-
         }}
       >
         <Box
@@ -57,7 +59,7 @@ const HeaderLogo = () => {
               fontSize: {
                 desktop: 29,
               },
-              letterSpacing: 2
+              letterSpacing: 2,
             }}
           >
             Массив-юг
