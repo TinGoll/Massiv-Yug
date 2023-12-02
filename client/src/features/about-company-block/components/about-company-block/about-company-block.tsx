@@ -92,8 +92,8 @@ const AboutCompanyBlock = () => {
             <ListComponents />
           </Grid>
 
-          <Grid item gridArea="button" margin={"0 auto"}>
-            <RoundButton
+          <Grid item gridArea="button" margin={"0 auto"} width={isMobile?"auto":"100%"}>
+            <RoundButton            
               onClick={onClickMoreDetails}
               height={isMobile ? 86 : 100}
               width={isMobile ? 206 : 230}

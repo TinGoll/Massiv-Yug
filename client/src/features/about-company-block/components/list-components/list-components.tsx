@@ -17,6 +17,7 @@ const Li = styled("li")`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  gap: 20px;
 `;
 
 const ListComponents = () => {
@@ -27,7 +28,7 @@ const ListComponents = () => {
     <Ul>
       {listItems.map((item) => (
         <Li key={item.key}>
-          <Box display="flex" marginTop="8px" marginRight="20px">
+          <Box>
             <PointIcon />
           </Box>
           <Typography
