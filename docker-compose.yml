@@ -13,6 +13,7 @@ services:
       massiv-yug:
         aliases:
           - client
+
   nginx:
     image: nginx:latest
     container_name: massiv-yug-nginx

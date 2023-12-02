@@ -11,6 +11,7 @@ import React from "react";
 import { HeaderBlock, TitleBlock } from "../../../../components";
 import ImagesComponent from "../images-component/images-component";
 import ListComponents from "../list-components/list-components";
+import { navigate } from "gatsby";
 
 const Crimson = styled("span")`
   color: ${({ theme }) => theme.colors.light.primary};
@@ -22,7 +23,7 @@ const AboutCompanyBlock = () => {
   );
 
   const onClickMoreDetails = () => {
-    // клик на кнопке "Подробнее"
+    navigate("/about");
   };
 
   return (
@@ -35,7 +36,6 @@ const AboutCompanyBlock = () => {
     >
       <Offset />
       <Container maxWidth="desktop">
-
         <HeaderBlock number={5} text={"О компании"} />
 
         <TitleBlock
@@ -45,7 +45,6 @@ const AboutCompanyBlock = () => {
         >
           КАЧЕСТВЕННАЯ СТИЛЬНАЯ МЕБЕЛЬ
         </TitleBlock>
-        
 
         <Grid
           container
@@ -92,8 +91,13 @@ const AboutCompanyBlock = () => {
             <ListComponents />
           </Grid>
 
-          <Grid item gridArea="button" margin={"0 auto"} width={isMobile?"auto":"100%"}>
-            <RoundButton            
+          <Grid
+            item
+            gridArea="button"
+            margin={"0 auto"}
+            width={isMobile ? "auto" : "100%"}
+          >
+            <RoundButton
               onClick={onClickMoreDetails}
               height={isMobile ? 86 : 100}
               width={isMobile ? 206 : 230}
