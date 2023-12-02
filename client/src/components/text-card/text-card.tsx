@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { SxProps } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -54,7 +54,12 @@ const TextCard: React.FC<Props> = ({
         gridArea="icon"
         sx={{
           display: icon ? "initial" : "none",
-          marginTop: number ? "0px" : "18px",
+          marginTop: number
+            ? "0px"
+            : {
+                mobile: "0px",
+                tablet: "18px",
+              },
         }}
       >
         <RoundIcon color={iconColorPrimary ? "primary" : "secondary"}>
