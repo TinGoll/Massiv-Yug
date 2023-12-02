@@ -1,8 +1,10 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { Container } from "@mui/material";
+import { Box, Button, Container, Typography, alpha } from "@mui/material";
+import { ElevationScroll, Header } from "../features/header";
 import { Banner } from "../features/banner";
 import Layout from "../layouts/layout";
+import { AboutCompanyBlock } from "../features/about-company-block";
 import CarouselBlock from "../features/carousel-block";
 import { OrderProcessBlock } from "../features/order-process-block";
 import AdvantagesBlock from "../features/advantages-block";
