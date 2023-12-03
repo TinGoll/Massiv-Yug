@@ -7,9 +7,6 @@ import BannerSubtitle from "./banner-subtitle";
 import { StaticImage } from "gatsby-plugin-image";
 
 const BannerInfoBlock: React.FC = () => {
-  const theme = useTheme();
-
-  console.log("theme.mixins.toolbar");
 
   return (
     <Box
