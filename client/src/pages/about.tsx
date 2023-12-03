@@ -33,4 +33,4 @@ const About = () => {
 
 export default About;
 
-export const Head: HeadFC = () => <title>Массив юг - о компании.</title>;
+export const Head: HeadFC = () => <title>Массив Юг - О компании.</title>;

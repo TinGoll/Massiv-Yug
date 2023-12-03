@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import { ImageLayout } from "../../../../components";
 import { Guarantee } from "../../../../assets/icons";
