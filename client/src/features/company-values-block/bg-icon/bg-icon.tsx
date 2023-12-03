@@ -18,9 +18,7 @@ const BgIcon: React.FC = () => {
       sx={{
         display: {
           mobile: "none",
-          tablet: "none",
           laptop: "flex",
-          desktop: "flex",
         },
       }}
     >

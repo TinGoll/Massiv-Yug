@@ -53,7 +53,11 @@ const BreadcrumbsComp: React.FC<Props> = ({ adress, links, sx, ...props }) => {
             </Text>
           </Link>
         ) : (
-          <Text key={`${index}:${item}`} first={index === 0} last={index === array.length - 1}>
+          <Text
+            key={`${index}:${item}`}
+            first={index === 0}
+            last={index === array.length - 1}
+          >
             {item}
           </Text>
         );

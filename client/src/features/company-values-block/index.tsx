@@ -31,14 +31,10 @@ const CompanyValuesBlock = () => {
             sx={{
               marginTop: {
                 mobile: "25px",
-                tablet: "25px",
-                laptop: "25px",
                 desktop: "70px",
               },
               marginBottom: {
                 mobile: "33px",
-                tablet: "33px",
-                laptop: "33px",
                 desktop: "40px",
               },
             }}
@@ -51,20 +47,14 @@ const CompanyValuesBlock = () => {
               alignItems: "flex-start",
               flexDirection: {
                 mobile: "column",
-                tablet: "column",
-                laptop: "column",
                 desktop: "row",
               },
               gap: {
                 mobile: "15px",
-                tablet: "15px",
-                laptop: "15px",
                 desktop: "50px",
               },
               paddingTop: {
                 mobile: "27px",
-                tablet: "27px",
-                laptop: "27px",
                 desktop: "12px",
               },
             }}
