@@ -2,7 +2,7 @@ import React, { useCallback, useRef } from "react";
 import { Block } from "../../../../components";
 import BannerSwiper from "../banner-swiper/banner-swiper";
 import { SwiperRef } from "swiper/react";
-import { Box, Container } from "@mui/material";
+import { Box, Container, alpha } from "@mui/material";
 import BannerMask from "../banner-mask/banner-mask";
 import { banerList } from "../../constants/list";
 import BannerActionBlock from "./banner-action-block";
@@ -32,10 +32,11 @@ const Banner: React.FC = () => {
   return (
     <Block
       id="banner"
-      sx={{
+      sx={(theme) => ({
         minHeight: "100vh",
         position: "relative",
-      }}
+        bgcolor: alpha(theme.colors.light.secondary, 0.7),
+      })}
     >
       <BannerSwiper ref={swiperRef} />
       <BannerMask />

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import React from "react";
 import { ImageLayout } from "../../../../components";
 import { Guarantee } from "../../../../assets/icons";
@@ -7,6 +7,10 @@ import BannerSubtitle from "./banner-subtitle";
 import { StaticImage } from "gatsby-plugin-image";
 
 const BannerInfoBlock: React.FC = () => {
+  const theme = useTheme();
+
+  console.log("theme.mixins.toolbar");
+
   return (
     <Box
       sx={{
@@ -15,6 +19,10 @@ const BannerInfoBlock: React.FC = () => {
         alignItems: "center",
         justifyContent: "flex-end",
         paddingBottom: 6,
+        paddingTop: {
+          mobile: 0,
+          laptop: "130px",
+        },
         gap: {
           mobile: 4,
           laptop: 10,

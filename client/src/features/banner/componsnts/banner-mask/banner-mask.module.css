@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .mask {
@@ -18,7 +18,7 @@
   mask-image: url("./rounded_rectangle.svg");
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: auto 100vh;
+  mask-size: auto 100%;
 }
 
 .bg {

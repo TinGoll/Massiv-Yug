@@ -1,5 +1,5 @@
 const timeShow = 2500; // Время отображения текста
-const speedClean = 100; // Скорость стирания
+const speedClean = 200; // Скорость стирания
 const speedTyping = 200; // Скорость печати
 const delay = 400; // Задержка между фрагментами текста
 
