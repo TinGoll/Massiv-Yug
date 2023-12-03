@@ -41,7 +41,7 @@ const BannerActionBlock: React.FC<Props> = ({ typingStatus }) => {
             },
           }}
         >
-          Вы получите{" "}
+          <span>Вы получите&nbsp;</span>
           <PrintedText
             timeShow={3500}
             list={banerList}
