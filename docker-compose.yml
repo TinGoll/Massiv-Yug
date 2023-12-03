@@ -20,7 +20,7 @@ services:
     depends_on:
       - client
     ports:
-      - "8000:8000"
+      - "8080:8080"
     volumes:
       - www-html:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/nginx.conf
