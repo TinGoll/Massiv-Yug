@@ -10,6 +10,7 @@ interface Props {
   number?: number;
   button?: ReactNode;
   iconColorPrimary?: boolean;
+  noPadding?: boolean;
   children?: ReactNode;
   sx?: SxProps;
 }
@@ -20,6 +21,7 @@ const TextCard: React.FC<Props> = ({
   number,
   button,
   iconColorPrimary,
+  noPadding,
   children,
   sx,
   ...props
@@ -33,10 +35,12 @@ const TextCard: React.FC<Props> = ({
         {
           backgroundColor: iconColorPrimary ? "#FFC0993D" : "",
           overflow: "hidden",
-          padding: {
-            mobile: "15px",
-            tablet: "30px",
-          },
+          padding: noPadding
+            ? "0px"
+            : {
+                mobile: "15px",
+                tablet: "30px",
+              },
           alignItems: "center",
           gridTemplateAreas: {
             mobile: `'icon title' 'text text' 'button button'`,

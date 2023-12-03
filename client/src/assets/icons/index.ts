@@ -3,6 +3,7 @@ import ApproveFile from "./approve-file-icon";
 import Bookmark from "./bookmark-icon";
 import Chip from "./chip-icon";
 import Compressi from "./compress-icon";
+import Compressi2 from "./compress2-icon";
 import Guarantee from "./guarantee-icon";
 import Lamp from "./lamp-icon";
 import Lifebuoy from "./lifebuoy-icon";
@@ -39,5 +40,6 @@ export {
   Star,
   Transform,
   WoodTexture,
-  Whatsapp
+  Whatsapp,
+  Compressi2,
 };
