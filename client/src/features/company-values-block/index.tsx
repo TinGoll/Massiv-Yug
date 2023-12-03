@@ -7,23 +7,19 @@ import BgIcon from "./bg-icon/bg-icon";
 
 const CompanyValuesBlock = () => {
   return (
-    <Block
-      id="06"
-      sx={{
-        display: "grid",
-        justifyItems: "center",
-      }}
-    >
+    <Block id="06">
       <Offset />
-
       <Box
-        sx={(theme) => ({
-          position: "relative",
+        sx={(theme) => ({          
           overflow: "hidden",
           paddingTop: "67px",
+          display: "grid",
+          justifyItems: "center",
         })}
       >
-        <Container maxWidth="desktop">
+        <Container maxWidth="desktop" sx={{
+          position:"relative",
+        }}>
           <BgIcon />
           <HeaderBlock number={6} text={"Преимущества"} />
 
