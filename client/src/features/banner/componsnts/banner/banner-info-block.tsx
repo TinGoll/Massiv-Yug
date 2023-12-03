@@ -7,6 +7,7 @@ import BannerSubtitle from "./banner-subtitle";
 import { StaticImage } from "gatsby-plugin-image";
 
 const BannerInfoBlock: React.FC = () => {
+
   return (
     <Box
       sx={{
@@ -15,6 +16,10 @@ const BannerInfoBlock: React.FC = () => {
         alignItems: "center",
         justifyContent: "flex-end",
         paddingBottom: 6,
+        paddingTop: {
+          mobile: 0,
+          laptop: "130px",
+        },
         gap: {
           mobile: 4,
           laptop: 10,

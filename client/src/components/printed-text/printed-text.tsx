@@ -50,9 +50,9 @@ const PrintedText: React.FC<Props> = ({
       return;
     }
 
-    let operation: Operation = "show";
+    let operation: Operation = "typing";
     let index = 0;
-    let cursor = list[index].length - 1;
+    let cursor = 0;
     handleFinish(list[index]);
     setValue(list[index]);
 

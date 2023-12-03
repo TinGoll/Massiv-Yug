@@ -13,14 +13,13 @@ const AdvantagesBlock: React.FC = () => {
       <Box
         sx={(theme) => ({
           bgcolor: theme.colors.light.secondary,
-          position: "relative",
           overflow: "hidden",
           paddingTop: "67px",
         })}
       >
-        <BgIcon />
+        <Container maxWidth="desktop" sx={{ position: "relative" }}>
         <HeaderBlock darkTheme number={2} text="Преимущества" />
-        <Container maxWidth="desktop">
+          <BgIcon />
           <TitleBlock
             mt={4}
             sx={{
@@ -31,7 +30,7 @@ const AdvantagesBlock: React.FC = () => {
           </TitleBlock>
           <InfoBlock />
         </Container>
-        <GraphicBlock  />
+        <GraphicBlock />
         <GraphicBlockMobile />
         <Offset />
       </Box>

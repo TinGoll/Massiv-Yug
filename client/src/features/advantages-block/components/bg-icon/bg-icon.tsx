@@ -4,8 +4,8 @@ import WoodTextureIcon from "../../../../assets/icons/wood-texture-icon";
 
 const IconContainer = styled("div")`
   position: absolute;
-  top: 67px;
-  right: 167px;
+  top: 0;
+  right: -60px;
   ${({ theme }) => theme.breakpoints.down("tablet")} {
     display: none;
   }
