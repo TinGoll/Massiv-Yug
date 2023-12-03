@@ -7,6 +7,7 @@ import { OrderProcessBlock } from "../features/order-process-block";
 import AdvantagesBlock from "../features/advantages-block";
 import PartnerBlock from "../features/partner-block";
 import { AboutCompanyBlock } from "../features/about-company-block";
+import CompanyValuesBlock from "../features/company-values-block";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -18,6 +19,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <OrderProcessBlock />
         <PartnerBlock />
         <AboutCompanyBlock />
+        <CompanyValuesBlock />
       </main>
     </Layout>
   );

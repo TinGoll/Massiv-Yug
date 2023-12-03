@@ -6,7 +6,7 @@ const IconContainer = styled("div")`
   position: absolute;
   top: 0px;
   left: 70px;
-
+  z-index: -1;
   ${({ theme }) => theme.breakpoints.down("tablet")} {
     display: none;
   }
