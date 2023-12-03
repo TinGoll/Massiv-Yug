@@ -12,7 +12,6 @@ const CompanyValuesBlock = () => {
       <Box
         sx={(theme) => ({          
           overflow: "hidden",
-          paddingTop: "67px",
           display: "grid",
           justifyItems: "center",
         })}
