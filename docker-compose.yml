@@ -31,7 +31,11 @@ services:
 
 volumes:
   www-html:
-    nocopy: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /path/on/host
 
 networks:
   massiv-yug:
