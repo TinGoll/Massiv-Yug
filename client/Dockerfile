@@ -8,10 +8,11 @@ RUN npm install && \
     npm run clean && \
     npm rebuild && \
     npm run build && \
-    mv public ../public
+    mv public /usr/share/nginx/html
 
 FROM nginx:latest
 
-COPY --from=builder /app/../public /usr/share/nginx/html
+# Копируем статические файлы из первого этапа (builder)
+COPY --from=builder /usr/share/nginx/html /usr/share/nginx/html
 
 EXPOSE 8080
