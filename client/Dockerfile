@@ -14,4 +14,4 @@ FROM nginx:latest
 
 COPY --from=builder /app/../public /usr/share/nginx/html
 
-EXPOSE 8080
+EXPOSE 8000
