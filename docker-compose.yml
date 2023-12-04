@@ -28,6 +28,7 @@ services:
       massiv-yug:
         aliases:
           - nginx
+    command: /bin/sh -c "nginx -g 'daemon off;' && nginx -s reload"
 
 volumes:
   www-html:
