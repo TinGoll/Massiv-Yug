@@ -14,7 +14,4 @@ FROM nginx:latest
 
 COPY --from=builder /app/../public /usr/share/nginx/html
 
-RUN mkdir -p /var/cache/nginx && \
-    chown nginx:nginx /var/cache/nginx
-
 EXPOSE 8080
