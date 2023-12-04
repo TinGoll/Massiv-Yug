@@ -14,7 +14,7 @@ const AdvantagesBlock: React.FC = () => {
         sx={(theme) => ({
           bgcolor: theme.colors.light.secondary,
           overflow: "hidden",
-          paddingTop: "67px",
+          paddingTop: "37px",
         })}
       >
         <Container maxWidth="desktop" sx={{ position: "relative" }}>

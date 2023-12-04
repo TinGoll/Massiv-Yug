@@ -14,8 +14,8 @@ const CarouselBlock: React.FC = () => {
   return (
     <Block id="01">
       <Offset />
-      <HeaderBlock number={1} text="Продукция" />
       <Container maxWidth="desktop">
+        <HeaderBlock number={1} text="Продукция" />
         <TextBlock />
         <ActionButtons
           value={category}

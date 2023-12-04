@@ -1,12 +1,15 @@
 import React, { memo } from "react";
 // import Swiper core and required modules
-import { Mousewheel, Autoplay } from "swiper/modules";
+import { Mousewheel, Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import * as styles from "./carousel.module.css";
-import "swiper/css";
+
 import { ImageLayout } from "../../../../components";
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { motion } from "framer-motion";
+
+import "swiper/css";
+import "swiper/css/free-mode";
 
 // Временно, пока нет сервера.
 const variannts = [
@@ -25,12 +28,12 @@ const Сarousel: React.FC<Props> = ({ category }) => {
     <Swiper
       slidesPerView={"auto"}
       // centeredSlides={true}
-      speed={200}
       spaceBetween={30}
       direction="horizontal"
       mousewheel={true}
       loop={true}
-      modules={[Mousewheel, Autoplay]}
+      freeMode={true}
+      modules={[Mousewheel, Autoplay, FreeMode]}
       className={styles.swiper}
     >
       {Array(30)
@@ -47,13 +50,14 @@ const Сarousel: React.FC<Props> = ({ category }) => {
                   height: "100%",
                   transition: "0.2s ease-out",
                   cursor: "pointer",
+                  userSelect: "none",
                 }}
               >
                 <ImageLayout height={358} width={236}>
                   <img src={item.src} alt={item.name} />
                 </ImageLayout>
               </motion.div>
-              <Typography textAlign="center" fontWeight={600} mt={3}>
+              <Typography textAlign="center" fontWeight={600} mt={3} sx={{userSelect: 'none'}}>
                 {item.name}
               </Typography>
             </SwiperSlide>

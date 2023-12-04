@@ -8,9 +8,6 @@ const ImageLayout: React.FC<Props> = ({
   rectangle,
   ...props
 }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("tablet"));
-
   const calculateRadius = () => {
     if (rectangle) {
       return 40;
@@ -23,7 +20,12 @@ const ImageLayout: React.FC<Props> = ({
   return (
     <Box
       sx={[
-        { borderRadius: `${radius}px`, width, height, overflow: "hidden" },
+        {
+          borderRadius: `${radius}px`,
+          width,
+          height,
+          overflow: "hidden",
+        },
         ...(Array.isArray(sx) ? sx : [sx]),
       ]}
       {...props}
