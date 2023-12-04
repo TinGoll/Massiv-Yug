@@ -15,7 +15,9 @@ services:
           - client
 
   nginx:
-    image: nginx:latest
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
     container_name: massiv-yug-nginx
     depends_on:
       - client
@@ -28,10 +30,10 @@ services:
       massiv-yug:
         aliases:
           - nginx
-    command: /bin/sh -c "nginx -g 'daemon off;' && nginx -s reload"
 
 volumes:
   www-html:
+
 
 networks:
   massiv-yug:
