@@ -8,9 +8,11 @@ services:
       - GATSBY_API_HOST=https://massiv-yug.ru
       - GATSBY_API_PORT=3000
     volumes:
-      - ./client/public:/usr/share/nginx/html
+      - www-html:/usr/share/nginx/html
     networks:
-      - massiv-yug
+      massiv-yug:
+        aliases:
+          - client
 
   nginx:
     image: nginx:latest
@@ -20,10 +22,15 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./client/public:/usr/share/nginx/html
+      - www-html:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
-      - massiv-yug
+      massiv-yug:
+        aliases:
+          - nginx
+
+volumes:
+  www-html:
 
 networks:
   massiv-yug:
