@@ -25,5 +25,5 @@ RUN apk --no-cache add \
 WORKDIR /app
 COPY --from=builder /app ./
 
-EXPOSE 3000
+EXPOSE 3100
 CMD ["npm", "run", "start:prod"]
