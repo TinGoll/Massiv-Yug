@@ -15,10 +15,6 @@ const WhatWeProduceBlock = () => {
     theme.breakpoints.down("laptop")
   );
 
-  const isDesktop = useMediaQuery<Theme>((theme) =>
-    theme.breakpoints.down("desktop")
-  );
-
   return (
     <Block
       id="ImagesBaner"
@@ -29,34 +25,52 @@ const WhatWeProduceBlock = () => {
     >
       <Container maxWidth="desktop">
         <TitleBlock
-          marginBottom={isLaptop ? "26px" : "43px"}
           sx={{
-            textAlign: isLaptop ? "center" : "start",
+            marginBottom: {
+              mobile: "26px",
+              laptop: "43px",
+            },
+            textAlign: {
+              mobile: "center",
+              laptop: "start",
+            },
           }}
         >
           Что мы производим
         </TitleBlock>
 
         <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-around"
-          gap="30px"
           sx={{
-            marginBottom: isLaptop ? "32px" : "60px",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            gap: "30px",
+            marginBottom: {
+              mobile: "32px",
+              laptop: "60px",
+            },
+            flexWrap: {
+              mobile: "wrap",
+              desktop: "nowrap",
+            },
           }}
-          flexWrap={isDesktop ? "wrap" : "nowrap"}
         >
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            gap="32px"
-            flexBasis={isDesktop ? "40%" : "25%"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "32px",
+              flexBasis: {
+                mobile: "40%",
+                desktop: "25%",
+              },
+            }}
           >
             <ImageLayout
               width={isLaptop ? 155 : 297}
               height={isLaptop ? 230 : 437}
+              
             >
               <StaticImage
                 style={{
@@ -79,11 +93,16 @@ const WhatWeProduceBlock = () => {
           </Box>
 
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            gap="32px"
-            flexBasis={isDesktop ? "40%" : "25%"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "32px",
+              flexBasis: {
+                mobile: "40%",
+                desktop: "25%",
+              },
+            }}
           >
             <ImageLayout
               width={isLaptop ? 155 : 297}
@@ -110,11 +129,16 @@ const WhatWeProduceBlock = () => {
           </Box>
 
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            gap="32px"
-            flexBasis={isDesktop ? "40%" : "25%"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "32px",
+              flexBasis: {
+                mobile: "40%",
+                desktop: "25%",
+              },
+            }}
           >
             <ImageLayout
               width={isLaptop ? 155 : 297}
@@ -141,11 +165,16 @@ const WhatWeProduceBlock = () => {
           </Box>
 
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            gap="32px"
-            flexBasis={isDesktop ? "40%" : "25%"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "32px",
+              flexBasis: {
+                mobile: "40%",
+                desktop: "25%",
+              },
+            }}
           >
             <ImageLayout
               width={isLaptop ? 155 : 297}

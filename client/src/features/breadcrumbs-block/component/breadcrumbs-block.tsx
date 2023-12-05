@@ -4,10 +4,6 @@ import { Container, Theme, useMediaQuery } from "@mui/material";
 import BreadcrumbsComp from "../../../components/breadcrumbs-comp/breadcrumbs-comp";
 
 const BreadcrumbsBlock: React.FC<Props> = ({ adress, links }) => {
-  const isMobile = useMediaQuery<Theme>((theme) =>
-    theme.breakpoints.down("tablet")
-  );
-
   return (
     <Block
       id={`breadcrumbsBlock:${adress}`}
@@ -19,10 +15,19 @@ const BreadcrumbsBlock: React.FC<Props> = ({ adress, links }) => {
       <Container maxWidth="desktop">
         <BreadcrumbsComp
           sx={{
-            marginTop: isMobile ? "25px" : "33px",
-            marginBottom: isMobile ? "25px" : "50px",
+            marginTop: {
+              mobile: "25px",
+              tablet: "50px",
+            },
+            marginBottom: {
+              mobile: "25px",
+              tablet: "50px",
+            },
             display: "flex",
-            justifyContent: isMobile ? "center" : "flex-start",
+            justifyContent: {
+              mobile: "center",
+              tablet: "flex-start",
+            },
           }}
           adress={adress}
           links={links}

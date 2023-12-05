@@ -33,7 +33,6 @@ const HeaderBlock: React.FC<Props> = ({ darkTheme, number, text, sx }) => {
             display: "flex",
             alignItems: "center",
             height: "100%",
-            marginRight: "105px",
             fontSize: {
               mobile: "20px",
               tablet: "27px",
@@ -44,6 +43,12 @@ const HeaderBlock: React.FC<Props> = ({ darkTheme, number, text, sx }) => {
       >
         {number.toString().padStart(2, "0")}
       </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flex: "0 1 105px",
+        }}
+      />
       <Divider
         orientation="vertical"
         flexItem
@@ -53,6 +58,12 @@ const HeaderBlock: React.FC<Props> = ({ darkTheme, number, text, sx }) => {
             : theme.palette.divider,
         }}
       />
+      <Box
+        sx={{
+          display: "flex",
+          flex: "0 1 105px",
+        }}
+      />
       <Typography
         sx={{
           ...theme.typography.blockHeader,
@@ -60,7 +71,6 @@ const HeaderBlock: React.FC<Props> = ({ darkTheme, number, text, sx }) => {
           display: "flex",
           alignItems: "center",
           height: "100%",
-          marginLeft: "105px",
           fontSize: {
             mobile: "12px",
             tablet: "16px",

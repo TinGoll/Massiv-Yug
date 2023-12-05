@@ -11,17 +11,16 @@ import { StaticImage } from "gatsby-plugin-image";
 import theme from "../../../theme/theme";
 
 const ImagesBanerBlock = () => {
-  const isMobile = useMediaQuery<Theme>((theme) =>
-    theme.breakpoints.down("laptop")
-  );
-
   return (
     <Block
       id="ImagesBaner"
       sx={{
         display: "grid",
         justifyItems: "center",
-        marginBottom: isMobile ? "70px" : "60px",
+        marginBottom: {
+          mobile: "70px",
+          laptop: "60px",
+        },
       }}
     >
       <Container
@@ -29,19 +28,35 @@ const ImagesBanerBlock = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: isMobile ? "17px" : "56px",
+          gap: {
+            mobile: "17px",
+            laptop: "56px",
+          },
         }}
       >
         <Box
-          display="flex"
-          flexDirection={isMobile ? "column" : "row"}
-          gap="26px 30px"
+          sx={{
+            display: "flex",
+            flexDirection: {
+              mobile: "column",
+              laptop: "row",
+            },
+            gap: "26px 30px",
+          }}
         >
           <Box
-            display="flex"
-            flexDirection="column"
-            flexBasis={isMobile ? "100%" : "33%"}
-            gap={isMobile ? "17px" : "30px"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flexBasis: {
+                mobile: "100%",
+                laptop: "33%",
+              },
+              gap: {
+                mobile: "17px",
+                laptop: "30px",
+              },
+            }}
           >
             <ImageLayout rectangle>
               <StaticImage
@@ -65,10 +80,18 @@ const ImagesBanerBlock = () => {
           </Box>
 
           <Box
-            display="flex"
-            flexDirection="column"
-            flexBasis={isMobile ? "100%" : "33%"}
-            gap={isMobile ? "17px" : "30px"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flexBasis: {
+                mobile: "100%",
+                laptop: "33%",
+              },
+              gap: {
+                mobile: "17px",
+                laptop: "30px",
+              },
+            }}
           >
             <ImageLayout rectangle>
               <StaticImage
@@ -92,10 +115,18 @@ const ImagesBanerBlock = () => {
           </Box>
 
           <Box
-            display="flex"
-            flexDirection="column"
-            flexBasis={isMobile ? "100%" : "33%"}
-            gap={isMobile ? "17px" : "30px"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flexBasis: {
+                mobile: "100%",
+                laptop: "33%",
+              },
+              gap: {
+                mobile: "17px",
+                laptop: "30px",
+              },
+            }}
           >
             <ImageLayout rectangle>
               <StaticImage
@@ -121,15 +152,28 @@ const ImagesBanerBlock = () => {
         </Box>
 
         <Box
-          display="flex"
-          flexDirection={isMobile ? "column" : "row"}
-          gap="26px 30px"
+          sx={{
+            display: "flex",
+            flexDirection: {
+              mobile: "column",
+              laptop: "row",
+            },
+            gap: "26px 30px",
+          }}
         >
           <Box
-            display="flex"
-            flexDirection="column"
-            flexBasis={isMobile ? "100%" : "33%"}
-            gap={isMobile ? "17px" : "30px"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flexBasis: {
+                mobile: "100%",
+                laptop: "33%",
+              },
+              gap: {
+                mobile: "17px",
+                laptop: "30px",
+              },
+            }}
           >
             <ImageLayout rectangle>
               <StaticImage
@@ -153,10 +197,18 @@ const ImagesBanerBlock = () => {
           </Box>
 
           <Box
-            display="flex"
-            flexDirection="column"
-            flexBasis={isMobile ? "100%" : "33%"}
-            gap={isMobile ? "17px" : "30px"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flexBasis: {
+                mobile: "100%",
+                laptop: "33%",
+              },
+              gap: {
+                mobile: "17px",
+                laptop: "30px",
+              },
+            }}
           >
             <ImageLayout rectangle>
               <StaticImage
@@ -182,10 +234,18 @@ const ImagesBanerBlock = () => {
           </Box>
 
           <Box
-            display="flex"
-            flexDirection="column"
-            flexBasis={isMobile ? "100%" : "33%"}
-            gap={isMobile ? "17px" : "30px"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              flexBasis: {
+                mobile: "100%",
+                laptop: "33%",
+              },
+              gap: {
+                mobile: "17px",
+                laptop: "30px",
+              },
+            }}
           >
             <ImageLayout rectangle>
               <StaticImage

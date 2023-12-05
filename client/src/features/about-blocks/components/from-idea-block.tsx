@@ -10,12 +10,9 @@ import React from "react";
 import { Block, ImageLayout, TitleBlock } from "../../../components";
 import { StaticImage } from "gatsby-plugin-image";
 import { Lamp } from "../../../assets/icons";
+import theme from "../../../theme/theme";
 
 const FromIdeaBlock = () => {
-  const isLaptop = useMediaQuery<Theme>((theme) =>
-    theme.breakpoints.down("laptop")
-  );
-
   const isTablet = useMediaQuery<Theme>((theme) =>
     theme.breakpoints.down("tablet")
   );
@@ -38,40 +35,83 @@ const FromIdeaBlock = () => {
     >
       <Container maxWidth="desktop">
         <TitleBlock
-          marginBottom={isLaptop ? "26px" : "43px"}
           sx={{
-            textAlign: isLaptop ? "center" : "start",
+            marginBottom: {
+              mobile: "26px",
+              laptop: "43px",
+            },
+            textAlign: {
+              mobile: "center",
+              laptop: "start",
+            },
           }}
         >
           Массив-юг: От идеи до воплощения в каждой мелочи
         </TitleBlock>
 
         <Box
-          display="flex"
-          flexDirection={isLaptop ? "column-reverse" : "row"}
-          gap="19px 76px"
-          marginBottom={isLaptop ? "32px" : "60px"}
+          sx={{
+            display: "flex",
+            gap: "19px 76px",
+            flexDirection: {
+              mobile: "column-reverse",
+              laptop: "row",
+            },
+            marginBottom: {
+              mobile: "32px",
+              laptop: "60px",
+            },
+          }}
         >
           <Box
-            display="flex"
-            flexDirection="column"
-            gap={isLaptop ? "10px" : "30px"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: {
+                mobile: "10px",
+                laptop: "30px",
+              },
+            }}
           >
-            <Typography variant="text" fontSize={isLaptop ? "15px" : "16px"}>
+            <Typography
+              variant="text"
+              sx={{
+                fontSize: {
+                  mobile: "15px",
+                  laptop: "16px",
+                },
+              }}
+            >
               Дизайн интерьера дома – это ваша индивидуальность, и центральное
               место здесь занимает качественная стильная мебель. Благодаря
               компании «МАССИВ-ЮГ» вы сами можете принять участие в создание
               своей мебели из массива, выбирая её стилистику, конфигурацию,
               цветовые решения и фурнитуру. Всё остальное сделаем мы.
             </Typography>
-            <Typography variant="text" fontSize={isLaptop ? "15px" : "16px"}>
+            <Typography
+              variant="text"
+              sx={{
+                fontSize: {
+                  mobile: "15px",
+                  laptop: "16px",
+                },
+              }}
+            >
               Мастерская «МАССИВ-ЮГ» специализируется на создании элитной
               качественной мебели, лестниц из массива натуральной древесины на
               заказ. Уже более десяти лет мы производим кухни, фасады, двери из
               массива и декоративные элементы из твёрдых пород дерева, таких как
               дуб, ольха, бук и ясень.
             </Typography>
-            <Typography variant="text" fontSize={isLaptop ? "15px" : "16px"}>
+            <Typography
+              variant="text"
+              sx={{
+                fontSize: {
+                  mobile: "15px",
+                  laptop: "16px",
+                },
+              }}
+            >
               За время работы мы накопили огромный опыт и знания, позволяющие
               создавать не просто мебель, а настоящие произведения искусства,
               которые по достоинству оценят люди с хорошим вкусом, ценящие
@@ -86,7 +126,10 @@ const FromIdeaBlock = () => {
               sx={{
                 color: "#000",
                 fontFamily: "Orchidea Pro",
-                fontSize: isLaptop ? "18px" : "26px",
+                fontSize: {
+                  mobile: "18px",
+                  laptop: "26px",
+                },
                 fontStyle: "normal",
                 fontWeight: "600",
                 lineHeight: "133%",
@@ -100,10 +143,15 @@ const FromIdeaBlock = () => {
           </Box>
           <Box display="flex" flexDirection="column">
             <Box
-              display="flex"
-              flexDirection="row"
-              justifyContent="center"
-              gap={isLaptop ? "30px" : "37px"}
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                gap: {
+                  mobile: "30px",
+                  laptop: "37px",
+                },
+              }}
             >
               <ImageLayout
                 width={isTablet ? 153 : 238}
@@ -139,18 +187,31 @@ const FromIdeaBlock = () => {
             </Box>
 
             <Box
-              display="flex"
-              flexDirection="row"
-              paddingTop={isLaptop ? "10px" : "20px"}
-              width={isLaptop ? "100%" : 506}
-              gap="10px"
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "10px",
+                paddingTop: {
+                  mobile: "10px",
+                  laptop: "20px",
+                },
+                width: {
+                  mobile: "100%",
+                  laptop: "506px",
+                },
+              }}
             >
               <Lamp width="40px" height="40px" />
               <Typography
                 variant="text"
-                fontSize={isLaptop ? "15px" : "16px"}
-                flex={1}
-                marginTop="30px"
+                sx={{
+                  flex: 1,
+                  marginTop: "30px",
+                  fontSize: {
+                    mobile: "15px",
+                    laptop: "16px",
+                  },
+                }}
               >
                 Расширяйте пространство, изменяйте геометрию помещения,
                 создавайте акценты{" "}
