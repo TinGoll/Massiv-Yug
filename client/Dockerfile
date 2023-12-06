@@ -18,7 +18,7 @@ RUN npm install \
 FROM nginx:alpine
 
 # Копируем собранные файлы из предыдущего этапа
-COPY --from=builder /app/public /usr/share/nginx/html
+COPY --from=builder /app/../public /usr/share/nginx/html
 
 # Открываем порт 8080 для доступа к веб-приложению
 EXPOSE 8080
