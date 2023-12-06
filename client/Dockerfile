@@ -1,17 +1,24 @@
+# Stage 1: Build Stage
 FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-COPY . .
+# Копируем только необходимые файлы, чтобы избежать копирования лишних данных
+COPY package.json package-lock.json ./
 
-RUN npm install && \
-    npm run clean && \
-    npm rebuild && \
-    npm run build && \
-    mv public ../public
+# Устанавливаем зависимости и выполняем сборку приложения
+RUN npm install \
+    && npm run clean \
+    && npm rebuild \
+    && npm run build \
+    && mv public ../public \
+    && npm cache clean --force
 
-FROM nginx:latest
+# Stage 2: Production Stage
+FROM nginx:alpine
 
-COPY --from=builder /app/../public /usr/share/nginx/html
+# Копируем собранные файлы из предыдущего этапа
+COPY --from=builder /app/public /usr/share/nginx/html
 
+# Открываем порт 8080 для доступа к веб-приложению
 EXPOSE 8080
