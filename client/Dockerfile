@@ -10,7 +10,7 @@ RUN npm install && \
     npm run build && \
     mv public ../public
 
-FROM nginx:alpine
+FROM nginx:latest
 
 COPY --from=builder /app/../public /usr/share/nginx/html
 
